@@ -1,19 +1,7 @@
 #ifndef BMP_IO_H
 #define BMP_IO_H
 
-/* Data structures for representing 24-bit BMP images in memory */
-
-typedef struct {
-    unsigned char r;
-    unsigned char g;
-    unsigned char b;
-} RGB;
-
-typedef struct {
-    int width;
-    int height;
-    RGB *data;
-} Image;
+#include "../bmp_image.h"
 
 /* Reads a 24-bit BMP file, builds an Image struct and returns it */
 Image *read_image_from_BMP_file(const char *file_name);
